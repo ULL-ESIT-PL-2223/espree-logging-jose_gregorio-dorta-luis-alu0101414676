@@ -9,7 +9,7 @@
     "scripts": {
         "test": "mocha test/test.mjs",
         "cov": "c8 npm test",
-        "docs": "npx nyc --reporter=html --reporter=text --report-dir docs mocha"
+        "docs": "npx c8 --reporter=html --reporter=text --report-dir docs mocha"
     },
     "dependencies": {
         "acorn": "^8.8.2",

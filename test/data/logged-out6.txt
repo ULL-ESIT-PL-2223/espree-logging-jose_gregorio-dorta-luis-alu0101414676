@@ -1,0 +1,2 @@
+Entering <anonymousfunction>(10,10) at line 5
+Entering daBuenosDias(undefined) at line 1

@@ -64,7 +64,7 @@ foo(1, 'wut', 3);
 
 ## CLI con [Commander.js](https://www.npmjs.com/package/commander)
 
-![commander](readme_docs/comandos)
+![commander](readme_docs/comandos.png)
 ...
 
 ## Retos 1 y 2
@@ -200,7 +200,10 @@ for (let i = 0; i < Test.length; i++) {
 }
 ```
  - Covering:
-![commander](readme_docs/cov)
-
+![commander](readme_docs/cov.png)
 ## Publicación del paquete en npmjs
-![paquete_publicado](readme_docs/paquete)
+
+![paquete_publicado](readme_docs/paquete.png)
+## Github Actions
+
+![actions](readme_docs/actions.png)

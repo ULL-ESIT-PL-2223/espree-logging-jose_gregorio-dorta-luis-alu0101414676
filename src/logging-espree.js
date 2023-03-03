@@ -3,6 +3,12 @@ import * as espree from "espree";
 import * as estraverse from "estraverse";
 import * as fs from "fs/promises";
 
+/**
+ * función que se encarga de la transpilación
+ * @param {*} inputFile fichero de entrada donde se va a extraer el código
+ * @param {*} outputFile fichero donde se imprimirá el código resultante
+ * @returns 
+ */
 export async function transpile(inputFile, outputFile) {
   let input = await fs.readFile(inputFile, 'utf-8');
   let output = addLogging(input);
@@ -13,6 +19,13 @@ export async function transpile(inputFile, outputFile) {
   await fs.writeFile(outputFile, output);
 }
 
+/**
+ * función que se encarga ingresar en el arbol generado, recorrer sus nodo y 
+ * detenerce en aquellos que hacen referencia a funciones, funciones flecha ó
+ * expresiones de funciones
+ * @param {*} code 
+ * @returns 
+ */
 export function addLogging(code) {
   var ast = espree.parse(code, {ecmaVersion: 12, loc: true});
   estraverse.traverse(ast, {
@@ -27,6 +40,10 @@ export function addLogging(code) {
   return escodegen.generate(ast);
 }
 
+/**
+ * función que se encarga de insertar el console log al inicio de cada función
+ * @param {*} node nodo del árbol
+ */
 function addBeforeCode(node) {
   const name = node.id ? node.id.name : '<anonymous function>';
   let paramNames = "";

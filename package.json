@@ -1,6 +1,7 @@
 {
-    "name": "espree-logging-solution",
-    "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
+    "name": "@alu0101414676/constant-folding",
+    "version": "1.0.0",
+    "author": "Jose Gregorio Dorta Luis <alu0101414676@ull.edu.es>",
     "description": "Adds logs to javascript code",
     "type": "module",
     "bin": {
@@ -19,7 +20,6 @@
         "estraverse": "^5.2.0",
         "underscore": "^1.12.0"
     },
-    "version": "0.3.0",
     "devDependencies": {
         "mocha": "^10.2.0"
     }
